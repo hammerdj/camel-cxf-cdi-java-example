@@ -22,6 +22,7 @@ import org.apache.camel.Endpoint;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.cdi.ContextName;
 import org.apache.camel.cdi.Uri;
+import org.apache.camel.LoggingLevel;
 
 import io.fabric8.annotations.Alias;
 import io.fabric8.annotations.ServiceName;
@@ -49,8 +50,8 @@ public class GreetingRoute extends RouteBuilder {
 	public void configure() throws Exception {
 
 		from(cxfEndpoint).beanRef("greetingProcessor").log("In: ${body}").inOnly("amq:queue:greetings")
-				.log("HelloWorld")
-				.setBody(simple("Hello, ${body}!"));
+				.log(LoggingLevel.INFO, "HelloWorld")
+				.setBody(simple("Hi, ${body}!"));
 	}
 
 }
