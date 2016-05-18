@@ -49,6 +49,7 @@ public class GreetingRoute extends RouteBuilder {
 	public void configure() throws Exception {
 
 		from(cxfEndpoint).beanRef("greetingProcessor").log("In: ${body}").inOnly("amq:queue:greetings")
+				.log("HelloWorld")
 				.setBody(simple("Hello, ${body}!"));
 	}
 
