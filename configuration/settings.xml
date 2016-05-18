@@ -6,10 +6,10 @@
 		<profile>
 			<id>build.repos</id>
 			<repositories>
-				<!--<repository>
+				<repository>
 					<id>openshift.repo</id>
 					<name>OpenShift Nexus Repository</name>
-					<url>http://nexus-nexus.rhel-cdk.10.1.2.2.xip.io/repository/red-hat-all/</url>
+					<url>http://docker-nexus3-nexus.rhel-cdk.10.1.2.2.xip.io/repository/redhat.ga/</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -18,10 +18,10 @@
 						<updatePolicy>never</updatePolicy>
 					</releases>
 				</repository>
-				<repository>
+				<!--<repository>
 					<id>rh.group.repo</id>
 					<name>Local Nexus Repository</name>
-					<url>http://10.1.2.1:8081/repository/red-hat/</url>
+					<url>http://10.1.2.2:8081/repository/red-hat/</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -29,11 +29,11 @@
 						<enabled>true</enabled>
 						<updatePolicy>never</updatePolicy>
 					</releases>
-				</repository>
+				</repository>-->
 				<repository>
 				<id>fusesource.m2</id>
 					<name>FuseSource Community Release Repository</name>
-					<url>http://10.1.2.1:8081/repository/fuse-source-ga/</url>
+					<url>http://docker-nexus3-nexus.rhel-cdk.10.1.2.2.xip.io/repository/fusesource.m2/</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -45,7 +45,7 @@
 				<repository>
 				<id>fusesource.ea</id>
 					<name>FuseSource Community Early Access Release Repository</name>
-					<url>http://10.1.2.1:8081/repository/fuse-source-ea/</url>
+					<url>http://docker-nexus3-nexus.rhel-cdk.10.1.2.2.xip.io/repository/usesource.ea/</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -57,7 +57,7 @@
 				<repository>
 				<id>redhat.ga</id>
 					<name>Red Hat General Availability Repository</name>
-					<url>http://10.1.2.1:8081/repository/red-hat-ga/</url>
+					<url>http://docker-nexus3-nexus.rhel-cdk.10.1.2.2.xip.io/repository/redhat.ga/</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -69,7 +69,7 @@
 				<repository>
 				<id>maven.central</id>
 					<name>Maven Central Repository</name>
-					<url>http://10.1.2.1:8081/repository/maven-central/</url>
+					<url>http://docker-nexus3-nexus.rhel-cdk.10.1.2.2.xip.io/repository/maven-central/</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -77,8 +77,8 @@
 						<enabled>true</enabled>
 						<updatePolicy>never</updatePolicy>
 					</releases>
-				</repository>-->
-				<repository>
+				</repository>
+				<!--<repository>
 					<id>fusesource.m2</id>
 					<name>FuseSource Community Release Repository</name>
 					<url>https://repo.fusesource.com/nexus/content/groups/public</url>
@@ -113,10 +113,10 @@
 						<enabled>true</enabled>
 						<updatePolicy>never</updatePolicy>
 					</releases>
-				</repository>
+				</repository>-->
 			</repositories>
 			<pluginRepositories>
-				<!--<pluginRepository>
+				<pluginRepository>
 					<id>openshift.repo</id>
 					<name>OpenShift Nexus Repository</name>
 					<url>http://nexus-nexus.rhel-cdk.10.1.2.2.xip.io/repository/red-hat-all/</url>
@@ -131,7 +131,7 @@
 				<pluginRepository>
 					<id>local.repo</id>
 					<name>Local Nexus Repository</name>
-					<url>http://10.1.2.1:8081/repository/red-hat/</url>
+					<url>http://10.1.2.2:8081/repository/red-hat/</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -143,7 +143,7 @@
 				<pluginRepository>
 				<id>fusesource.m2</id>
 					<name>FuseSource Community Release Repository</name>
-					<url>http://10.1.2.1:8081/repository/fuse-source-ga/</url>
+					<url>http://10.1.2.2:8081/repository/fuse-source-ga/</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -155,7 +155,7 @@
 				<pluginRepository>
 				<id>fusesource.ea</id>
 					<name>FuseSource Community Early Access Release Repository</name>
-					<url>http://10.1.2.1:8081/repository/fuse-source-ea/</url>
+					<url>http://10.1.2.2:8081/repository/fuse-source-ea/</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -167,7 +167,7 @@
 				<pluginRepository>
 				<id>redhat.ga</id>
 					<name>Red Hat General Availability Repository</name>
-					<url>http://10.1.2.1:8081/repository/red-hat-ga/</url>
+					<url>http://10.1.2.2:8081/repository/red-hat-ga/</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -179,7 +179,7 @@
 				<pluginRepository>
 				<id>maven.central</id>
 					<name>Maven Central Repository</name>
-					<url>http://10.1.2.1:8081/repository/maven-central/</url>
+					<url>http://10.1.2.2:8081/repository/maven-central/</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -187,8 +187,8 @@
 						<enabled>true</enabled>
 						<updatePolicy>never</updatePolicy>
 					</releases>
-				</pluginRepository>-->
-				<pluginRepository>
+				</pluginRepository>
+				<!--<pluginRepository>
 					<id>fusesource.m2</id>
 					<name>FuseSource Community Release Repository</name>
 					<url>https://repo.fusesource.com/nexus/content/groups/public</url>
@@ -223,7 +223,7 @@
 						<enabled>true</enabled>
 						<updatePolicy>never</updatePolicy>
 					</releases>
-				</pluginRepository>
+				</pluginRepository>-->
 			</pluginRepositories>
 		</profile>
 	</profiles>
